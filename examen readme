@@ -1,0 +1,50 @@
+Examentraining
+
+Opdracht: website voor restaurant met een tafel reserveersysteem, er moeten rekeningen komen, menukaarten, lijsten voor de kok.
+
+Applicatie wordt in php gebouwd. 
+
+Je mag google gebruiken dus alles wat je van wouter krijgt kan je op github zetten om later terug te vinden
+
+Je maakt je examen op een schoolmachine en alles staat er al op, office geinstalleerd alleen xampp moet je zelf activeren.
+
+
+Je moet ook normaliseren voor je examen
+Tabel voor je klanten
+Reserveringenlijst
+
+
+Database maken
+
+1.	Create 
+2.	Kolom maken
+3.	Id = int en AI moet aan primary key
+4.	Name varchar 255
+5.	Email varchar 255
+6.	Telnr varchar max 25
+7.	Create en daaarna zie je een overzicht
+
+Opschrijven waarom je iets doet voor extra punten 
+
+Als je iets vaker gaat gebruiken (stukje code) maak een functie
+
+CRUD systeem is: moet je vaak gebruiken
+Create 
+Read 
+Update 
+Delete
+
+Website: PHPDELUSIONS.NET gaat je echt helpen
+
+Best om alles op een github te zetten zodat je alles terug kan zien
+
+Leren koppelen met joints tafeltabel en andere tabel
+
+Links:
+https://github.com/wouter075/dinsdag
+https://getbootstrap.com/docs/5.1/getting-started/introduction/
+https://phpdelusions.net/pdo
+https://www.w3schools.com/php/default.asp
+https://www.w3schools.com/sql/sql_join.asp
+
+
