@@ -12,21 +12,24 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                Home
+                <a class="link-dark" href="index.php">Home</a>
             </div>
             <div class="col">
-                Reserveringen
+                <a class="link-dark" href="reservering/index.php">Reserveringen</a>
             </div>
             <div class="col">
-                Serveren
-                <ul class="dropdown-menu">
-                    <li><h6 class="dropdown-header">Serveren</h6></li>
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Gegevens
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="Gegevens/menu/index.php">Menu</a></li>
+                        <li><a class="dropdown-item" href="Gegevens/rekeningen/index.php">Rekeningen</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="col">
-                Gegevens
+                <a class="link-dark" href="barman/index.php">Barman Overzicht</a>
             </div>
         </div>
     </div>
@@ -42,5 +45,6 @@
             Daarna kan een bestelling worden opgenomen.
         </p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

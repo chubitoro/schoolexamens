@@ -56,61 +56,6 @@ $reservaties = reservatieLijst($pdo);
 
 <br>
 <br>
-
-<!--hier maken we een nieuwe reservering-->
-<!--<form action="index.php" method="post">-->
-<!--    <div class="row mb-3">-->
-<!--        <label for="Datum" class="col-sm-2 col-form-label">Datum</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="date" class="form-control" id="Datum">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row mb-3">-->
-<!--        <label for="Tijd" class="col-sm-2 col-form-label">Tijd</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="time" class="form-control" id="Tijd">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row mb-3">-->
-<!--        <label for="Tafel" class="col-sm-2 col-form-label">Tafel</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="text" class="form-control" id="Tafel">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row mb-3">-->
-<!--        <label for="Klant_ID" class="col-sm-2 col-form-label">Naam</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="text" class="form-control" id="Klant_ID">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row mb-3">-->
-<!--        <label for="Aantal" class="col-sm-2 col-form-label">Aantal</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="text" class="form-control" id="Aantal">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row mb-3">-->
-<!--        <label for="text" class="col-sm-2 col-form-label">Kinderen</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="password" class="form-control" id="Aantal_k">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row mb-3">-->
-<!--        <label for="Allergieen" class="col-sm-2 col-form-label">Allergieen</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="text" class="form-control" id="Allergieen">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row mb-3">-->
-<!--        <label for="Opmerkingen" class="col-sm-2 col-form-label">Opmerkingen</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="text" class="form-control" id="Opmerkingen">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <button type="submit" class="btn btn-primary">Maak reservatie</button>-->
-<!--</form>-->
-
-<!-- hier is het overzicht van reserveringen-->
 <table class="table">
     <thead>
     <tr>
@@ -126,7 +71,8 @@ $reservaties = reservatieLijst($pdo);
     <tbody>
     <?php foreach ($reservaties as $rij) { ?>
         <tr>
-            <td><?= $rij['ID'] ?></td>
+            <td><a href="../barman/index.php?id=<?= $rij['ID'] ?>&tafel=<?= $rij['Tafel'] ?>"><?= $rij['ID'] ?></a></td>
+<!--            <td>--><?//= $rij['ID'] ?><!--</td>-->
             <td><?= $rij['Datum'] ?></td>
             <td><?= $rij['Tijd'] ?></td>
             <td><?= $rij['Tafel'] ?></td>
@@ -140,29 +86,27 @@ $reservaties = reservatieLijst($pdo);
 <div class="container">
     <div class="row">
         <div class="col">
-            Home
+            <a class="link-dark" href="index.php">Home</a>
         </div>
         <div class="col">
-            <a href="../reservering/index.php">Reserveringen</a>
+            <a class="link-dark" href="reservering/index.php">Reserveringen</a>
         </div>
         <div class="col">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Serveren
+                    Gegevens
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="Gegevens/menu/index.php">Menu</a></li>
+                    <li><a class="dropdown-item" href="Gegevens/rekeningen/index.php">Rekeningen</a></li>
                 </ul>
             </div>
         </div>
         <div class="col">
-            Gegevens
+            <a class="link-dark" href="barman/index.php">Barman Overzicht</a>
         </div>
     </div>
 </div>
-
 <!--<div class="container">-->
 <!--    <p>Welkom bij de reserverings- en bestellingenapplicatie van Restaurant Excellent Taste.-->
 <!--        <br>-->
